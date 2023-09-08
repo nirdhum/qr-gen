@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper {
+    background: #053B50;
+    color: #fff;
+    padding: 2.4rem 2rem;
+    max-height: 80vh;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 2px;
+}
+
+.wrapper.active {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.form input {
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    transition: 0.1s ease;
+    width: 100%;
+}
+
+.form input:focus {
+    box-shadow: 0 0 0 2px #64CCC5 inset;
+    outline: none;
+}
+
+.form button {
+    padding: 1rem 0.5rem;
+    font-weight: 600;
+    background: #64CCC5;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    color: #053B50;
+    transition: 0.1s ease;
+    width: 70%;
+}
+
+.form button:active {
+    transform: scale(0.95);
+}
+
+.qr-code {
+    opacity: 0;
+    display: none;
+    padding: 3rem 0;
+    border-radius: 2px;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+    box-shadow: 0 0 0 1px #64CCC5 inset;
+}
+
+.wrapper.active .qr-code {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+.qr-code img {
+    width: 17rem;
+}
+
+/* 
+
+.qr-code {
+    opacity: ©;
+    display: flex;
+    padding: 33px 0;
+    border-radius: 5px;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+.wrapper.active .qr-code {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+.qr-code img {
+    width: 170px;
+}
+
+@media (max-width: 430px) {
+    .wrapper {
+        height: 255px;
+        padding: 16px 20px;
+    }
+
+    .wrapper.active {
+        height: 510px;
+    }
+
+    header p {
+        color: #696969;
+    }
+
+    .form :where(input, button) {
+        height: 52px;
+    }
+
+    .qr-code img {
+        width: 160px;
+    }
+} */
