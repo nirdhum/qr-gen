@@ -27,35 +27,35 @@
 // })
 
 
-const endPoint = 'https://qr-code-by-api-ninjas.p.rapidapi.com/v1/qrcode?data=https%3A%2F%2Fapi-ninjas.com&format=png'
+// const endPoint = 'https://qr-code-by-api-ninjas.p.rapidapi.com/v1/qrcode?data=https%3A%2F%2Fapi-ninjas.com&format=png'
 
-const wrapper = document.querySelector('.wrapper'),
-    btnGenerate = wrapper.querySelector('.form button'),
-    textInput = wrapper.querySelector('.form input').value.trim(),
-    qrImage = wrapper.querySelector('.qr-code img')
+// const wrapper = document.querySelector('.wrapper'),
+//     btnGenerate = wrapper.querySelector('.form button'),
+//     textInput = wrapper.querySelector('.form input').value.trim(),
+//     qrImage = wrapper.querySelector('.qr-code img')
 
-btnGenerate.addEventListener('click', generateQRCode())
+// btnGenerate.addEventListener('click', generateQRCode())
 
-function generateQRCode() {
+// function generateQRCode() {
 
-    fetch(endPoint, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-RapidAPI-Key': '8663e3afadmsh701a2cb8b81edf1p17e984jsn71ec0b2b243c',
-            'X-RapidAPI-Host': 'qr-code-by-api-ninjas.p.rapidapi.com'
-        },
-        body: JSON.stringify({
-            text: textInput
-        })
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.qr_code) {
-                qrImage.src = data.qr_code;
-            } else {
-                alert('QR code generation failed.');
-            }
-        })
-        .catch(error => console.error('Error:', error));
-}
+//     fetch(endPoint, {
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             'X-RapidAPI-Key': '8663e3afadmsh701a2cb8b81edf1p17e984jsn71ec0b2b243c',
+//             'X-RapidAPI-Host': 'qr-code-by-api-ninjas.p.rapidapi.com'
+//         },
+//         body: JSON.stringify({
+//             text: textInput
+//         })
+//     })
+//         .then(response => response.json())
+//         .then(data => {
+//             if (data.qr_code) {
+//                 qrImage.src = data.qr_code;
+//             } else {
+//                 alert('QR code generation failed.');
+//             }
+//         })
+//         .catch(error => console.error('Error:', error));
+// }
